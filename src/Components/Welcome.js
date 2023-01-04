@@ -1,18 +1,17 @@
 import React from 'react';
-import './Welcome.css';
 
 export const Welcome = ({ send }) => {
-    const startBooking = () => {
+    const startTransfer = () => {
         send('TRANSFER');
     };
 
     return (
-        <div className='Welcome'>
-            <p className='Welcome-title title'>Send Money to Anyone!</p>
-            <p className='Welcome-description description'>
+        <div>
+            <p className='title'>Send Money to Anyone!</p>
+            <p className='description'>
                 Type in the contact you want to send money to, the amount and Transfer!
             </p>
-            <button onClick={startBooking} className='Welcome-cancel button'>Start Now</button>
+            <button onClick={startTransfer} className='Welcome-button button'>Start Now</button>
         </div>
     );
 }; 
