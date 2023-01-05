@@ -3,6 +3,7 @@ import { Welcome } from '../Components/Welcome';
 import { Contacts } from '../Components/Contacts';
 import { Quantity } from "../Components/Quantity";
 import { Confirm } from "../Components/Confirm";
+import { Success } from "../Components/Success";
 import './StepsLayout.css'
 
 export const StepsLayout = ({ state, send }) => {
@@ -11,6 +12,7 @@ export const StepsLayout = ({ state, send }) => {
         if (state.matches('contacts')) return <Contacts send={send}/>;
         if (state.matches('quantity')) return <Quantity send={send}/>;
         if (state.matches('confirm')) return <Confirm send={send}/>;
+        if (state.matches('success')) return <Success send={send}/>;
         return null;
     };
 
