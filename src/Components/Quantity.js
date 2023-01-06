@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const Quantity = ({ send }) => {
-    const selectMoney = () => {
-        send('INPUT');
+    const [amount, setAmout] = useState(0);
+
+    const selectMoney = (event) => {
+        event.preventDefault();
+        send('INPUT', {selectedAmount: amount});
     };
+
+    const handleSelectChange = (event) => {
+        setAmout(event.target.value);
+    }
 
     return (
         <div>
@@ -11,9 +18,15 @@ export const Quantity = ({ send }) => {
             <p className='description'>
                 Introduce the amount of money you are sending.
             </p>
-            <form className='form' onSubmit={e => { e.preventDefault(); selectMoney(); }}>
-                <textarea />
-                <button type="submit" className='button'>Continue</button>
+            <form className='form' onSubmit={selectMoney}>
+                <textarea value={amount} onChange={handleSelectChange}/>
+                <button 
+                    type="submit" 
+                    className='button' 
+                    disabled={amount <= 0 || isNaN(amount)}
+                >
+                    Continue
+                </button>
             </form>
         </div>
     );

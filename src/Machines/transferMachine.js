@@ -5,7 +5,7 @@ const transferMachine = createMachine ({
   initial: "initial",
   context: {
     selectedContact: '',
-    moneyAmount: '',
+    selectedAmount: 0,
   },
   states: {
     initial: {
@@ -28,7 +28,12 @@ const transferMachine = createMachine ({
     },
     quantity: {
       on: {
-        INPUT: "confirm",
+        INPUT: {
+          target: "confirm",
+          actions: assign({
+            selectedAmount: (context, event) => event.selectedAmount
+          })
+        },
         CANCEL: "initial"
       }
     },
