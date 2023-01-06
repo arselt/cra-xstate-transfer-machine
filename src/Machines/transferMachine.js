@@ -1,17 +1,28 @@
-import { createMachine } from 'xstate';
+import { assign, createMachine } from 'xstate';
 
 const transferMachine = createMachine ({
   id: 'Send money',
   initial: "initial",
+  context: {
+    selectedContact: '',
+    moneyAmount: '',
+  },
   states: {
     initial: {
       on: {
-        TRANSFER: "contacts" 
+        TRANSFER: {
+          target: "contacts",
+        }
       }
     },
     contacts: {
       on: {
-        PICK: "quantity",
+        PICK: {
+          target: "quantity",
+          actions: assign({
+            selectedContact: (context, event) => event.selectedContact
+          })
+        },
         CANCEL: "initial"
       }
     },
@@ -33,6 +44,14 @@ const transferMachine = createMachine ({
       }
     }
   }
-})
+},
+{
+  actions: {
+    printInitial: () => console.log("print initial"),
+    printEntry: () => console.log("print entry"),
+    printExit: () => console.log("print exit"),
+  }
+}
+);
 
 export default transferMachine;

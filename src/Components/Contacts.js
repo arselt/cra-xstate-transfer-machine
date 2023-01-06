@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const Contacts = ({ send }) => {
-    const selectContact = () => {
-        send('PICK');
+    const [contact, setContact] = useState("");
+
+    const selectContact = (event) => {
+        event.preventDefault();
+        send('PICK', {selectedContact: contact});
     };
+
+    const handleSelectChange = (event) => {
+        setContact(event.target.value);
+    }
 
     return (
         <div>
@@ -11,9 +18,9 @@ export const Contacts = ({ send }) => {
             <p className='description'>
                 Please type in the transaction recipient
             </p>
-            <form className='form' onSubmit={e => { e.preventDefault(); selectContact(); }}>
-                <textarea />
-                <button type="submit" className='button'>Select Contact</button>
+            <form className='form' onSubmit={selectContact}>
+                <textarea value={contact} onChange={handleSelectChange}/>
+                <button type="submit" className='button' disabled={contact === ""}>Select Contact</button>
             </form>
         </div>
     );
