@@ -5,10 +5,14 @@ const transferMachine = createMachine ({
   initial: "initial",
   context: {
     selectedContact: '',
-    selectedAmount: 0,
+    selectedAmount: null,
   },
   states: {
     initial: {
+      entry: assign((context, event) => {
+        context.selectedContact = '';
+        context.selectedAmount = null;
+      }),
       on: {
         TRANSFER: {
           target: "contacts",
@@ -48,13 +52,6 @@ const transferMachine = createMachine ({
         REPEAT: "initial"
       }
     }
-  }
-},
-{
-  actions: {
-    printInitial: () => console.log("print initial"),
-    printEntry: () => console.log("print entry"),
-    printExit: () => console.log("print exit"),
   }
 }
 );
