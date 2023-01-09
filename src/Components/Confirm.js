@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Confirm = ({ send }) => {
+export const Confirm = ({ send, context }) => {
     const confirmTransfer = () => {
         send('SEND');
     };
@@ -10,13 +10,13 @@ export const Confirm = ({ send }) => {
             <p className='title'>Please confirm the Transaction</p>
             <div className='transfer-layout'>
                 <p className='description'>
-                    $"Amount"
+                    💲 {context.selectedAmount}
                 </p>
                 <p className='description'>
-                    "Contact"
+                    👤 {context.selectedContact}
                 </p>
             </div>
-            <button className='button' onClick={confirmTransfer}>Send Money</button>
+            <button className='button' onClick={confirmTransfer} style={{marginTop: '60px'}}>Send Money</button>
         </div>
     );
 }; 

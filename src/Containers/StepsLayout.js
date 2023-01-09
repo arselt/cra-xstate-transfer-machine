@@ -6,13 +6,15 @@ import { Confirm } from "../Components/Confirm";
 import { Success } from "../Components/Success";
 import './StepsLayout.css'
 
+
+
 export const StepsLayout = ({ state, send }) => {
     const renderContent = () => {
         if (state.matches('initial')) return <Welcome send={send}/>;
         if (state.matches('contacts')) return <Contacts send={send}/>;
-        if (state.matches('quantity')) return <Quantity send={send}/>;
-        if (state.matches('confirm')) return <Confirm send={send}/>;
-        if (state.matches('success')) return <Success send={send}/>;
+        if (state.matches('quantity')) return <Quantity send={send} context={state.context}/>;
+        if (state.matches('confirm')) return <Confirm send={send} context={state.context}/>;
+        if (state.matches('success')) return <Success send={send} context={state.context}/>;
         return null;
     };
 

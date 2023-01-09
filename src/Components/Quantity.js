@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const Quantity = ({ send }) => {
+export const Quantity = ({ send, context }) => {
     const [amount, setAmout] = useState(0);
 
     const selectMoney = (event) => {
@@ -14,7 +14,7 @@ export const Quantity = ({ send }) => {
 
     return (
         <div>
-            <p className='title'>You're sending money to "Name"</p>
+            <p className='title'>You're sending money to "{(context.selectedContact)}"</p>
             <p className='description'>
                 Introduce the amount of money you are sending.
             </p>

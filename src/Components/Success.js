@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Success = ({ send }) => {
+export const Success = ({ send, context }) => {
     const successTransfer = () => {
         send('REPEAT');
     };
@@ -10,13 +10,13 @@ export const Success = ({ send }) => {
             <p className='title'>Your Money is on the way</p>
             <div className='transfer-layout'>
                 <p className='description'>
-                    $"Amount"
+                    💲 {context.selectedAmount}
                 </p>
                 <p className='description'>
-                    "Contact"
+                    👤 {context.selectedContact}
                 </p>
             </div>
-            <p className='description'>
+            <p className='description' style={{marginTop: '50px'}}>
                 Send money to another contact
             </p>
             <button className='button' onClick={successTransfer}>New Transaction</button>
