@@ -1,19 +1,20 @@
-# A Money Transfer state machine sample
+#  🏦 Bankarselt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### A react.js and xstate app use for transfering money (example)
 
-![xstate machine diagram](/public/xstate-thumbnail.png "Diagram")
+![App UI thumbnail](/public/project-thumbnail.png "Diagram")
 
-## Available Scripts
+⚛️ This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with [xstate](https://github.com/statelyai/xstate)
 
-In the project directory, you can run:
+![xstate machine diagram](/public/project-stateDiagram.png "Diagram")
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deploy
 
-### `npm run build`
+### [🚀 Deploy: bankselt.netlify.app](https://63bcdb8629aad83849f6accd--bankselt.netlify.app/)
+## Setup
+- ### Download the repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ### run `npm start`
+
+- ### Open [http://localhost:3000](http://localhost:3000) to view the local development mode in your browser.
