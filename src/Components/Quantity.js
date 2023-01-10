@@ -23,7 +23,7 @@ export const Quantity = ({ send, context }) => {
                 <button 
                     type="submit" 
                     className='button' 
-                    disabled={amount <= 0 || isNaN(amount)}
+                    disabled={amount <= 0 || isNaN(amount) || amount >= 999999999999}
                 >
                     Continue
                 </button>

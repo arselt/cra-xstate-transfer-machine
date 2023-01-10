@@ -48,6 +48,9 @@ const transferMachine = createMachine ({
       }
     },
     success: {
+      after: {
+        25000: { target: "initial" }
+      },
       on: {
         REPEAT: "initial"
       }
