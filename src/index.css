@@ -1,70 +1,73 @@
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #001011;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #001011;
 }
 
 .button {
-    border: none;
-    background-color: #037971;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all ease 300ms;
+  border: none;
+  background-color: #037971;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease 300ms;
 }
 
 .button:hover {
-    background-color: #02504A;
+  background-color: #02504a;
 }
 
 .button-secondary {
-    border: none;
-    background-color: #FE654F;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: #FFFFFF;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all ease 300ms;
+  border: none;
+  background-color: #fe654f;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease 300ms;
 }
 
 .button-secondary:hover {
-    color: #FFFFFF;
-    background-color: #FE4F34;
+  color: #ffffff;
+  background-color: #fe4f34;
 }
 
 .title {
-    font-size: 1.3rem;
-    margin: 0;
+  font-size: 1.3rem;
+  margin: 0;
 }
 
 .text {
-    font-size: 1rem;
-    margin: 4px 0;
-    width: 100%;
-    text-align: left;
+  font-size: 1rem;
+  margin: 4px 0;
+  width: 100%;
+  text-align: left;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .form textarea {
-    height: 48px;
-    resize: none;
-    border-radius: 8px;
+  height: 48px;
+  resize: none;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .transfer-layout {
-    text-align: center;
-    border: 2px solid #fff;
-    box-shadow: 0px 38px 120px -20px rgba(0,0,0,0.75);
-    border-radius: 8px;
-    margin: 16px 0;
+  text-align: center;
+  border: 2px solid #fff;
+  box-shadow: 0px 38px 120px -20px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  margin: 16px 0;
 }
