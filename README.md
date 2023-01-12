@@ -11,7 +11,7 @@
 
 ## Deploy
 
-### [🚀 Deploy: bankselt.netlify.app](https://63bcdb8629aad83849f6accd--bankselt.netlify.app/)
+### [🚀 Deploy: bankselt.netlify.app](https://bankselt.netlify.app/)
 ## Setup
 - ### Download the repository
 
